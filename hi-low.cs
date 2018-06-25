@@ -1,25 +1,10 @@
 using System;
 using System.Collections.Generic;
 
-class Guesses
-{
-  private int _guesses;
-
-  public void SetGuess(int newGuesses)
-  {
-   _guesses = newGuesses;
-  }
-  public int GetGuess()
-  {
-    return _guesses;
-  }
-}
-
 public class Program
 {
   public static void Main()
   {
-  Guesses userGuess = new Guesses();
   Console.WriteLine("Would you like to play the guess a number game? Enter Yes or No");
   string response = Console.ReadLine();
   int[] Range = {1, 101};
@@ -68,7 +53,7 @@ public class Program
   }
   else if (response == "Yes")
   {
-  Console.WriteLine("I have my number, go ahead and start guessing");
+  Console.WriteLine("I have my number, go ahead and start guessing my number.");
   int inputtedValue =  int .Parse(Console.ReadLine());
     while (true)
     {
@@ -79,12 +64,12 @@ public class Program
       }
       else if (inputtedValue < rand_number)
       {
-      Console.WriteLine("Guess Again, my number is greater than " + inputtedValue + " .");
+      Console.WriteLine("Guess Again, my number is greater than " + inputtedValue + ".");
       inputtedValue = int .Parse(Console.ReadLine());
       }
       else if (inputtedValue > rand_number)
       {
-      Console.WriteLine("Guess Again, my number is lower than " + inputtedValue + " .");
+      Console.WriteLine("Guess Again, my number is lower than " + inputtedValue + ".");
       inputtedValue = int .Parse(Console.ReadLine());
       }
     }
